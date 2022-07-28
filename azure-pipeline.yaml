@@ -1,0 +1,20 @@
+pool:
+  vmImage: "ubuntu-latest"
+
+steps:
+  - task: AmazonWebServices.aws-vsts-tools.S3Upload.S3Upload@1
+    displayName: Create Deploy Bucket
+    inputs:
+      awsCredentials: 'AWS Con'
+      regionName: 'us-east-1'
+      bucketName: cf-templates-1ia9ku75ifat8-us-east-1
+      sourceFolder: templates
+  
+  - task: CloudFormationCreateOrUpdateStack@1
+    inputs:
+      awsCredentials: 'AWS Con'
+      regionName: 'us-east-1'
+      stackName: 'my-rds-stack'
+      templateSource: 's3'
+      s3BucketName: 'cf-templates-1ia9ku75ifat8-us-east-1'
+      s3ObjectKey: 'Template-EC2-SG.yaml'

@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Resources:
+  MyPostgresDB:
+    Type: 'AWS::RDS::DBInstance'
+    Properties:
+      DBInstanceIdentifier: postgresql-sample-rds
+      DBName: sample_rds
+      DBInstanceClass: db.t4g.micro
+      AllocatedStorage: 10
+      Engine: postgres
+      EngineVersion: 13.4
+      MasterUsername: jhadmin
+      MasterUserPassword: x777xSecurity00
