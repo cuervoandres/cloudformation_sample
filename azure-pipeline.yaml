@@ -7,14 +7,14 @@ steps:
     inputs:
       awsCredentials: 'AWSConnection'
       regionName: 'us-east-1'
-      bucketName: cf-templates-1ia9ku75ifat8-us-east-1
+      bucketName: s3bucketpruebas-gc
       sourceFolder: templates
   
-  - task: CloudFormationCreateOrUpdateStack@1
-    inputs:
-      awsCredentials: 'AWS Con'
-      regionName: 'us-east-1'
-      stackName: 'my-rds-stack'
-      templateSource: 's3'
-      s3BucketName: 'cf-templates-1ia9ku75ifat8-us-east-1'
-      s3ObjectKey: 'Template-EC2-SG.yaml'
+  #- task: CloudFormationCreateOrUpdateStack@1
+    #inputs:
+      #awsCredentials: 'AWS Con'
+      #regionName: 'us-east-1'
+      #stackName: 'my-rds-stack'
+      #templateSource: 's3'
+      #s3BucketName: 'cf-templates-1ia9ku75ifat8-us-east-1'
+      #s3ObjectKey: 'Template-EC2-SG.yaml'
