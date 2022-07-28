@@ -5,7 +5,7 @@ steps:
   - task: AmazonWebServices.aws-vsts-tools.S3Upload.S3Upload@1
     displayName: Create Deploy Bucket
     inputs:
-      awsCredentials: 'AWS Con'
+      awsCredentials: 'AWSConnection'
       regionName: 'us-east-1'
       bucketName: cf-templates-1ia9ku75ifat8-us-east-1
       sourceFolder: templates
