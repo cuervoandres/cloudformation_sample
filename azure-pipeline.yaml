@@ -7,7 +7,7 @@ steps:
     inputs:
       awsCredentials: 'AWSConnection'
       regionName: 'us-east-1'
-      bucketName: s3bucketpruebas-gc
+      bucketName: 's3bucketpruebas-gc'
       sourceFolder: templates
   
   #- task: CloudFormationCreateOrUpdateStack@1
