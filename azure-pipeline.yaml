@@ -1,7 +1,5 @@
-pool:
-Default
-#  vmImage: "ubuntu-latest"
-
+pool: Default
+#vmImage: "ubuntu-latest"
 steps:
   - task: AmazonWebServices.aws-vsts-tools.S3Upload.S3Upload@1
     displayName: Create Deploy Bucket
