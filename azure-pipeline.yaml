@@ -1,5 +1,6 @@
 pool:
-  vmImage: "ubuntu-latest"
+Default
+#  vmImage: "ubuntu-latest"
 
 steps:
   - task: AmazonWebServices.aws-vsts-tools.S3Upload.S3Upload@1
